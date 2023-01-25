@@ -1,0 +1,405 @@
+.jumbotron {
+  width: 100%;
+  padding-top: 6rem;
+  background-color: #F5EFE0;
+  color: var(--grey);
+}
+
+
+
+.container {
+  overflow: hidden;
+}
+
+
+
+
+.hitam {
+  background-color: var(--secondary-color);
+  fill: var(--primary-color);
+}
+
+
+
+
+.putih {
+  background-color: var(--primary-color);
+  fill: var(--secondary-color);
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --birumuda: #e2edff;
+  --biru : #0d6efd;
+  --greytua :#333;
+}
+
+html {
+  transition: all 0.5s ease-in;
+}
+
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #000;
+  --hitam: #000;
+  --grey: #333;
+}
+
+html.dark {
+  background-color: #000;
+  color: var(--primary-color);
+}
+
+
+
+
+.toggle { 
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 0;
+  border-radius: 4px;
+  padding: 8px 12px;
+  justify-content: center;
+  position: absolute;
+  left: 47%;
+  margin-bottom: 5rem;
+}
+
+.toggle:focus {
+  outline: none;
+}
+
+section {
+  padding-top: 5rem;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.intro div.row {
+  padding: 0;
+}
+
+.intro-text span {
+  font-size: 40px;
+}
+
+.p-intro {
+  font-size: 18px;
+}
+
+/* animasi about */
+.about {
+  height: 400px;
+}
+
+.titik {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  left: -12px;
+  background-color: black;
+  margin-top: 5%;
+}
+
+.about, .titik, .education li, .experience li {
+  transition: .5s;
+}
+
+.education li, .skill li, .experience li {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.skill li .bungkus {
+  display: block;
+  width: 250px;
+  height: 4px;
+  border-radius: 2px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.skill li .bungkus span {
+  display: block;
+  width: 0;
+  height: 4px;
+  background-color: royalblue;
+  transition: .5s;
+}
+
+.education li p, .experience li p {
+  height: 0;
+  overflow: hidden;
+  transition: .5s;
+}
+/* selesai animasi about */
+
+
+/* Animasi navbar & intro*/
+.intro {
+  clip-path: polygon(0 0, 100% 0, 100% 94%, 0% 100%);
+}
+
+.intro .gambar div {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 22% 100%);
+}
+
+
+
+@keyframes geserAtas {
+  0%   {
+      transform: translate(0,-15px);
+  }
+  50%  {
+      transform: translate(0,-70px);
+  }
+  100% {
+      transform: translate(0,-15px);
+  }
+}
+
+.loop {
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.loop p {
+  animation: geserAtas 4s infinite;
+  transform: translate(0,-15px);
+}
+
+.intro p {
+  margin: 0;
+}
+
+/* Selesai Animasi navbar & intro */
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .text {
+    flex-wrap: wrap;
+    margin-left: 30%;
+    margin-right: 30%;
+    font-size: 1.2rem;
+    color: black;
+  }
+  
+  .text1 {
+    margin-left: 30%;
+    flex-wrap: wrap;  
+    margin-right: 30%;
+  }
+
+ 
+  
+
+
+  .display {
+    font-size: 1rem;
+  }
+
+  .toggle {
+    left: 38%;
+  }
+
+  .intro-text span{
+      font-size: 30px;
+  }
+
+  .p-intro {
+      font-size: 14px;
+  }
+
+  @keyframes geserAtas {
+      0%   {
+          transform: translate(0,-10px);
+      }
+      50%  {
+          transform: translate(0,-55px);
+      }
+      100% {
+          transform: translate(0,-10px);
+      }
+  }
+  .loop {
+      height: 30px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .content {
+    flex-wrap: wrap;
+
+    font-size: 1.2rem;
+    color: black;
+  }
+  
+  .text1 {
+    flex-wrap: wrap;  
+  }
+
+
+  .tombol {
+    margin-bottom: 5rem;
+  }
+
+  .intro {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .intro div.row {
+      display: flex;
+      flex-direction: column-reverse;
+  }
+
+  .intro .gambar {
+      width: 70%;
+  }
+
+  .intro .gambar div {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .intro-text span{
+      font-size: 20px;
+  }
+
+  .p-intro {
+      font-size: 10px;
+  }
+
+  @keyframes geserAtas {
+      0%   {
+          transform: translate(0,0);
+      }
+      50%  {
+          transform: translate(0,-30px);
+      }
+      100% {
+          transform: translate(0,0);
+      }
+  }
+
+  .about {
+    height: 800px;
+  }
+}
+
+
+/* DARK */
+
+.jumbotron.dark {
+  background-color: #333;
+  color: white;
+}
+
+#Education.dark {
+  background-color: #333;
+  color: white;
+}
+#Skills.dark {
+  background-color: #333;
+  color: white;
+}
+#Projects.dark {
+  background-color: #333;
+  color: white;
+}
+
+.footer.dark {
+  background-color: #333;
+  color: white;
+}
+
+.fw-bold.dark {
+  color: white;
+}
+.persen.dark {
+  color: white;
+}
+
+.abu.dark{
+  fill: #333;
+}
+
+.card-text.dark {
+  color: #000;
+}
+
+.atas.dark {
+  background-color: #000;
+  color: #fff;
+}
+
+
+
+.footer {
+  color: #000;
+  background-color: #F5EFE0;
+}
+
+
+
+.btn.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn {
+  background-color: blue;
+}
+
+.judul1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.gambar {
+  margin-top: 0%;
+  flex-direction: column-reverse;
+  border-radius: 48%;
+  margin: auto;
+  display: flex;
+  width: 300px;
+  height: 200px;
+}
+
+
+.content {
+  flex-wrap: wrap;
+  background-color: #F5EFE0;
+  margin-top: 2%;
+}
+
+.text {
+  flex-wrap: wrap;
+  margin-left: 30%;
+  margin-right: 30%;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.text1 {
+  margin-left: 30%;
+  flex-wrap: wrap;  
+  margin-right: 30%;
+}
+
+
+.footer1 {
+  text-align: center;
+}
+
+
+.footer3 {
+  color: white;
+}
